@@ -1,8 +1,9 @@
 const overlay = document.getElementById("start-overlay");
-
 overlay.addEventListener("click", () => {
   overlay.style.display = "none";
+  document.body.classList.add("started");
   audio.play();
+});
 }); const overlay = document.getElementById("start-overlay");
 
 overlay.addEventListener("click", () => {
