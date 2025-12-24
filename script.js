@@ -1,3 +1,5 @@
+const audio = new Audio("music.mp3");
+audio.loop = true;
 const canvas = document.createElement("canvas");
 canvas.className = "snow";
 document.body.appendChild(canvas);
