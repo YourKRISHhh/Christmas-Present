@@ -35,9 +35,8 @@ body {
 .container {
   text-align: center;
   padding: 40px 20px;
-  opacity: 0;
+  opacity: 1;
 }
-
 /* LOCKED / STARTED STATES */
 body.locked .container {
   opacity: 0;
