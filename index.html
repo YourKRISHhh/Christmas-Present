@@ -2,31 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Merry Christmas 🎄</title>
+  <title>For You 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+
+<body class="locked">
+
+  <!-- TAP TO BEGIN SCREEN -->
+  <div id="tap-screen">
+    <div class="tap-text">Tap to begin ✨</div>
+  </div>
+
+  <!-- MAIN CONTENT -->
   <div class="container">
-    <h1>Merry Christmas My Dear Babu🩷🎄</h1>
-    <p>
-      Aap ho toh, Zindagi me bahaar hai, <br>
-     Aap Hi toh mera pyaar hain❤️ <br>
-     Aapke sath zindagi h ek fasana <br>
-     Jeena toh bas h ek bahana.. <br> <br> 
-      May your Christmas be filled with warmth, soft lights, cozy moments,
-      and beautiful memories that stay forever.
+
+    <h1>Merry Christmas, My Dear Babu 💖🎄</h1>
+
+    <p class="poem">
+      Aap ho toh, zindagi me bahaar hai,<br>
+      Aap hi toh mera pyaar hain 💖<br>
+      Aapka saath zindagi ka afsaana,<br>
+      Jeena toh bas hai ek bahaana ✨
     </p>
-    <a href="notes.html" class="button">Open Notes 💌</a>
-    <button id="music-toggle" class="button music-toggle" aria-pressed="false">🔈 Music OFF</button>
+
+    <p class="wish">
+      May your Christmas be filled with warmth, soft lights,<br>
+      comfort and beautiful memories that stay forever.
+    </p>
+
+    <button id="music-toggle">🔊 Music On</button>
+
+    <div class="actions">
+      <a href="notes.html" class="button">Open Notes 💌</a>
+      <a href="gallery.html" class="button">View Gallery</a>
+    </div>
+
   </div>
-<p style="font-size:0.8em;opacity:0.7;">
-Best experienced with headphones 🎧
-</p>
+
   <script src="script.js"></script>
-</body><div id="start-overlay">
-  <div id="start-text">
-    Tap to begin ✨
-  </div>
-</div>
+</body>
 </html>
