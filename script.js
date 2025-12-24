@@ -1,52 +1,32 @@
-// -----------------------------
-// Cinematic Start Logic (Mobile-safe)
-// -----------------------------
+let audio = new Audio("music.mp3");
+audio.loop = true;
+audio.volume = 0.8;
 
-let audio;
-let started = false;
+function startSite() {
+  // remove tap screen
+  const tap = document.getElementById("tap-screen");
+  if (tap) tap.style.display = "none";
 
-window.addEventListener("load", () => {
-  audio = new Audio("music.mp3");
-  audio.loop = true;
-  audio.volume = 0.8;
+  // start animations
+  document.body.classList.remove("locked");
+  document.body.classList.add("started");
 
-  const overlay = document.getElementById("start-overlay");
+  // start music
+  audio.play().catch(() => {});
+}
 
-  if (!overlay) return;
+// music toggle (simple)
+window.onload = function () {
+  const btn = document.getElementById("music-toggle");
+  if (!btn) return;
 
-  overlay.addEventListener("click", () => {
-    if (started) return;
-    started = true;
-
-    // Remove overlay
-    overlay.style.display = "none";
-
-    // Start animations
-    document.body.classList.add("started");
-
-    // Start music (mobile allows after user gesture)
-    audio.play().catch(() => {
-      // If browser blocks, user can press music button later
-    });
-  });
-});
-
-// -----------------------------
-// Music toggle button (optional)
-// -----------------------------
-window.addEventListener("load", () => {
-  const musicToggle = document.getElementById("music-toggle");
-  if (!musicToggle) return;
-
-  musicToggle.addEventListener("click", () => {
-    if (!audio) return;
-
+  btn.onclick = function () {
     if (audio.paused) {
       audio.play();
-      musicToggle.textContent = "🔊 Music On";
+      btn.textContent = "🔊 Music On";
     } else {
       audio.pause();
-      musicToggle.textContent = "🔇 Music Off";
+      btn.textContent = "🔇 Music Off";
     }
-  });
-}); 
+  };
+};
