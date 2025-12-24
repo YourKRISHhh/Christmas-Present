@@ -3,6 +3,11 @@ const overlay = document.getElementById("start-overlay");
 overlay.addEventListener("click", () => {
   overlay.style.display = "none";
   audio.play();
+}); const overlay = document.getElementById("start-overlay");
+
+overlay.addEventListener("click", () => {
+  overlay.style.display = "none";
+  audio.play();
 });// =============================
 // Simple & Reliable Music Script
 // =============================
