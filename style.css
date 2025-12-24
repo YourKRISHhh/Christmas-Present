@@ -13,11 +13,13 @@ body {
   min-height: 100vh;
 }
 
-/* TAP TO BEGIN SCREEN */
+/* =========================
+   TAP TO BEGIN (HOME ONLY)
+   ========================= */
 #tap-screen {
   position: fixed;
   inset: 0;
-  background: #000000;
+  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,23 +33,29 @@ body {
   animation: pulse 2s infinite;
 }
 
-/* MAIN CONTAINER */
+/* =========================
+   CONTAINER
+   ========================= */
 .container {
   text-align: center;
   padding: 40px 20px;
-  opacity: 1;
 }
-/* LOCKED / STARTED STATES */
-body.locked .container {
+
+/* =========================
+   HOME PAGE CINEMATIC LOGIC
+   ========================= */
+body.home.locked .container {
   opacity: 0;
 }
 
-body.started .container {
+body.home.started .container {
   opacity: 1;
   animation: fadeIn 2s ease forwards;
 }
 
-/* TEXT STYLES */
+/* =========================
+   TEXT
+   ========================= */
 h1 {
   font-size: 26px;
   margin-bottom: 16px;
@@ -67,7 +75,9 @@ h1 {
   margin-bottom: 22px;
 }
 
-/* BUTTONS */
+/* =========================
+   BUTTONS
+   ========================= */
 .actions {
   display: flex;
   flex-direction: column;
@@ -90,12 +100,14 @@ h1 {
   padding: 10px 18px;
   border-radius: 20px;
   border: none;
-  background: #333333;
-  color: #ffffff;
+  background: #333;
+  color: #fff;
   font-size: 14px;
 }
 
-/* ANIMATIONS */
+/* =========================
+   ANIMATIONS
+   ========================= */
 @keyframes fadeIn {
   from {
     opacity: 0;
